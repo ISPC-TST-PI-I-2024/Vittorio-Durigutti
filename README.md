@@ -1,3 +1,5 @@
+![image](/assets/Prueba ISPC portada 2024.jpg)
+
 ## TPs de Proyecto Integrador
 
 ### Vittorio-Durigutti
