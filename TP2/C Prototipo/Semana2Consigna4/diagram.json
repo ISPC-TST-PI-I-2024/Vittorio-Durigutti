@@ -1,0 +1,28 @@
+{
+    "version": 1,
+    "author": "vitto durigutti",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+      { "type": "wokwi-potentiometer", "id": "pot1", "top": 37.1, "left": -134.6, "attrs": {} },
+      { "type": "wokwi-led", "id": "led1", "top": 15.6, "left": 157.4, "attrs": { "color": "red" } },
+      {
+        "type": "wokwi-resistor",
+        "id": "r1",
+        "top": 109.55,
+        "left": 124.8,
+        "attrs": { "value": "1000" }
+      }
+    ],
+    "connections": [
+      [ "esp:TX", "$serialMonitor:RX", "", [] ],
+      [ "esp:RX", "$serialMonitor:TX", "", [] ],
+      [ "led1:A", "r1:2", "green", [ "v0" ] ],
+      [ "esp:5", "r1:1", "green", [ "h0" ] ],
+      [ "esp:GND.2", "led1:C", "black", [ "v0", "h43.24", "v28.8" ] ],
+      [ "pot1:VCC", "esp:3V3", "red", [ "v9.6", "h37.6", "v-86.4" ] ],
+      [ "pot1:SIG", "esp:34", "green", [ "v19.2", "h57.2", "v-57.6" ] ],
+      [ "esp:GND.1", "pot1:GND", "black", [ "h0" ] ]
+    ],
+    "dependencies": {}
+  }

@@ -1,0 +1,33 @@
+{
+    "version": 1,
+    "author": "vitto durigutti",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+      {
+        "type": "wokwi-pushbutton-6mm",
+        "id": "btn1",
+        "top": 132.2,
+        "left": 144,
+        "attrs": { "color": "green" }
+      },
+      { "type": "wokwi-led", "id": "led1", "top": 102, "left": 205.4, "attrs": { "color": "red" } },
+      {
+        "type": "wokwi-resistor",
+        "id": "r1",
+        "top": 167.15,
+        "left": 153.6,
+        "attrs": { "value": "1000" }
+      }
+    ],
+    "connections": [
+      [ "esp:TX", "$serialMonitor:RX", "", [] ],
+      [ "esp:RX", "$serialMonitor:TX", "", [] ],
+      [ "led1:A", "r1:2", "green", [ "v19.2", "h-9.6" ] ],
+      [ "led1:C", "esp:GND.2", "green", [ "v0", "h-18.8", "v-115.2" ] ],
+      [ "esp:15", "r1:1", "green", [ "v0" ] ],
+      [ "btn1:2.l", "esp:2", "green", [ "h-28.8", "v10" ] ],
+      [ "esp:GND.3", "btn1:1.l", "black", [ "h0" ] ]
+    ],
+    "dependencies": {}
+  }
