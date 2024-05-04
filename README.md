@@ -1,4 +1,5 @@
-![image](/assets/Prueba ISPC portada 2024.jpg)
+
+![Imagen portada](/assets/caratulaPI.png)
 
 ## TPs de Proyecto Integrador
 
